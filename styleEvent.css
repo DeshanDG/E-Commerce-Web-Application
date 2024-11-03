@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --primary-color: #2c3855;
+  --primary-color-dark: #435681;
+  --text-dark: #333333;
+  --text-light: #767268;
+  --extra-light: #f3f4f6;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.section__header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav__menu {
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.nav__icons {
+  display: flex;
+  gap: 1rem;
+  color: var(--text-light);;
+}
+
+.link a {
+  font-weight: 500;
+  color:var(--text-light);;
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+.link a i{ 
+font-size:20px;
+color:var(--text-light);
+}
+.link a i:hover{ 
+color:rad;
+}
+
+.nav__logo img {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+      /* Section 1: Full-Width Background Image */
+.full-width-background {
+    background-image: url('BG1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 500px; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topic {
+    background: rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.topic h1 {
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+}
+
+
+
+/* Section 2: Meeting & Events Description */
+.meeting-events-description {
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.meeting-events-description h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.event-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.event-image {
+    width: 100%;
+    max-width: 800px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.event-text {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+  /*footer*/
+
+
+  .footer {
+    background-color: black;
+    color: white;
+    padding-top: 3rem;
+    padding: 1rem 1rem;
+  }
+  
+  .footer__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem 1rem;
+  }
+  
+  
+  .footer__logo-section {
+    text-align: center;
+  }
+  
+  .footer__logo-section img {
+    height: 150px;
+  }
+  
+  .footer__logo-section hr {
+    margin: 1rem auto;
+    width: auto;
+    border: 0;
+    border-top: 2px solid #fff;
+  }
+  
+  .footer__col {
+    color: white;
+  }
+  
+  .footer__col ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer__col ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer__col ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer__col ul li a:hover {
+    color: #ccc;
+  }
+  
+  .promo-section {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+  }
+  
+  .promo-section input {
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .promo-section label {
+    color: white;
+    margin-top: 0.5rem;
+  }
+  
+  .newsletter-btn {
+    padding: 0.5rem;
+    background-color: white;
+    color: black;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .Boking-btn{
+    padding: 0.9rem;
+    background-color: white;
+    color: black;
+    font-weight:800;
+    width: 230px;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  .Boking-btn:hover{
+    color:white;
+    background-color:black;
+  }
+  
+  .newsletter-btn:hover {
+    background-color: #ccc;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center; 
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  .footer__bar {
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    font-size: 0.9rem;
+    background-color: black; 
+  }

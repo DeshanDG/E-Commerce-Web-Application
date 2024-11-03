@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --primary-color: #2c3855;
+  --primary-color-dark: #435681;
+  --text-dark: #333333;
+  --text-light: #767268;
+  --extra-light: #f3f4f6;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.section__header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav__menu {
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.nav__icons {
+  display: flex;
+  gap: 1rem;
+  color: var(--text-light);;
+}
+
+.link a {
+  font-weight: 500;
+  color:var(--text-light);;
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+.link a i{ 
+font-size:20px;
+color:var(--text-light);
+}
+.link a i:hover{ 
+color:rad;
+}
+
+.nav__logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding-top: 3rem;
+  padding: 1rem 1rem;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+
+.footer__logo-section {
+  text-align: center;
+}
+
+.footer__logo-section img {
+  height: 150px;
+}
+
+.footer__logo-section hr {
+  margin: 1rem auto;
+  width: auto;
+  border: 0;
+  border-top: 2px solid #fff;
+}
+
+.footer__col {
+  color: white;
+}
+
+.footer__col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer__col ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer__col ul li a:hover {
+  color: #ccc;
+}
+
+.promo-section {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.promo-section input {
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.promo-section label {
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.newsletter-btn {
+  padding: 0.5rem;
+  background-color: white;
+  color: black;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.newsletter-btn:hover {
+  background-color: #ccc;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; 
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.footer__bar {
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  font-size: 0.9rem;
+  background-color: black; 
+}
+.form-container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+.stats-container {
+    display: flex; /* Align items in a row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 20px;
+    padding: 20px;
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+.stat-card {
+    min-width: 300px; /* Set a minimum width for each card */
+    max-width: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+}
+
+.stat-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.room-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.room-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+}
+
+.room-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.btn-details {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-details:hover {
+    background-color: #555;
+}
+
+.stat-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Hide scrollbar for better aesthetics */
+.stats-container::-webkit-scrollbar {
+    display: none;
+}
+
+.stats-container {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.room-details h1{
+  margin-left:40px
+}
+
+/* Login Form Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.login-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #1c1951;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #1c1951;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background-color: #403e80;
+}

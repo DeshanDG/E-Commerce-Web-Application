@@ -1,0 +1,1151 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #f0f2f5;
+    overflow: hidden;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.logo {
+    width :110px;
+	 height:auto;
+	margin-left:40px;
+    margin-bottom: 40px;
+}
+
+
+.nav-links {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.nav-links li {
+    margin-bottom: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: #4caf50;
+}
+
+.sign-out-container {
+    margin-top: auto;
+    text-align: center;
+}
+
+.sign-out {
+    padding: 10px 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sign-out:hover {
+    background-color: #c0392b;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1abc9c;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    color: white;
+	border-radius:15px;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 30px;
+}
+
+/* Content Container */
+.content-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    overflow-y: auto; /* Scroll vertically only if needed */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    max-height: 80vh; /* Optional: Set a max height to prevent overflow */
+    width: 100%; /* Ensure the container spans the full width */
+}
+
+/* Centering Dashboard H1 */
+.dashboard-content h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+ .content-section h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+/* Stats Cards Container */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Stat Card Styles */
+.stat-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.stat-card p {
+    font-size: 32px;
+    color: #333;
+    font-weight: bold;
+}
+
+.stat-card:hover {
+    transform: scale(1.05);
+}
+.hidden {
+    display: none;
+}
+
+.edit-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.edit-form.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+
+table.data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+		border-radius:15px;
+    }
+
+    table.data-table th,
+    table.data-table td {
+        padding: 12px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    table.data-table thead {
+        background-color: #333;
+        color: #fff;
+    }
+
+    table.data-table tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    table.data-table tbody tr:hover {
+        background-color: #e0e0e0;
+    }
+
+    .actions .btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+.actions {
+    display: flex;
+    gap: 10px; /* Adds space between the buttons */
+}
+
+.actions .btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    display: flex;
+    align-items: center; /* Center align the icon */
+    justify-content: center; /* Center align the icon */
+}
+
+.actions .btn.edit {
+    color: #4caf50; /* Green color for edit button */
+}
+
+.actions .btn.delete {
+    color: #f44336; /* Red color for delete button */
+}
+
+.actions .btn:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+    border: 1px solid #ccc; /* Border on hover */
+}
+
+.actions .btn.edit:hover {
+    background-color: rgba(76, 175, 80, 0.1); /* Light green background on hover */
+}
+
+.actions .btn.delete:hover {
+    background-color: rgba(244, 67, 54, 0.1); /* Light red background on hover */
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between the Add Employee button and search form */
+    justify-content: space-between;
+    width: 100%;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adds space between input and button */
+}
+
+.search-input,.employeeSearchInput {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 14px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+.search-input,.employeeSearchInput:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.search-btn {
+    padding: 8px 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn i {
+    font-size: 18px; /* Icon size */
+}
+
+.search-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.search-btn:active {
+    background-color: #388e3c;
+    transform: scale(0.95); /* Shrink effect on click */
+}
+
+.add-user-btn {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-user-btn:hover {
+    background-color: #45a049;
+}
+
+		.add-Employee-btn {
+            background-color: #4caf50;
+			border-radius:10px;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            cursor: pointer;
+            right: 20px;
+            top: 20px;
+        }
+		.add-Room-btn {
+            background-color: #4caf50;
+			border-radius:10px;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            cursor: pointer;
+            right: 20px;
+            top: 20px;
+        }
+		.add-Event-btn {
+            background-color: #4caf50;
+			border-radius:10px;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            cursor: pointer;
+            right: 20px;
+            top: 20px;
+        }
+		.add-Loyalty-btn {
+            background-color: #4caf50;
+			border-radius:10px;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            cursor: pointer;
+            right: 20px;
+            top: 20px;
+        }
+		.add-Contact-btn {
+            background-color: #4caf50;
+			border-radius:10px;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            cursor: pointer;
+            right: 20px;
+            top: 20px;
+        }
+		.add-Comment-btn {
+            background-color: #4caf50;
+			border-radius:10px;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            cursor: pointer;
+            right: 20px;
+            top: 20px;
+        }
+
+        /* User Form Modal */
+        .user-form-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .user-form-modal.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .user-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .user-form input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .user-form button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+			border-radius:15px;
+            padding: 10px;
+            cursor: pointer;
+        }
+/* Employee Form Modal */
+/* Modal Background */
+.Employee-form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Fully transparent */
+    transition: opacity 0.3s; /* Smooth transition */
+}
+
+/* Show Modal */
+.Employee-form-modal.active {
+    visibility: visible; /* Make it visible */
+    opacity: 1; /* Fully opaque */
+}
+
+/* Form Styling */
+.Employee-form {
+    background-color: white; /* White background for the form */
+    padding: 30px; /* Padding around the form */
+    border-radius: 8px; /* Rounded corners */
+    width: 300px; /* Fixed width */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Space between items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Input Fields */
+.Employee-form input {
+    padding: 10px; /* Padding inside input */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 14px; /* Font size for readability */
+}
+
+/* Focus Effect for Inputs */
+.Employee-form input:focus {
+    border-color: #4caf50; /* Green border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Styling */
+.Employee-form button {
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px; /* Padding inside button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Larger font size for the button */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+/* Button Hover Effect */
+.Employee-form button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* User Form Modal */
+        .Room-form-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .Room-form-modal.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .Room-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .Room-form input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .Room-form button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+			border-radius:15px;
+            padding: 10px;
+            cursor: pointer;
+        }
+	
+
+    /* Table Styling */
+    .data-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+table.data-table thead {
+        background-color: #333;
+        color: #fff;
+    }
+    .data-table th, .data-table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .data-table th {
+		background-color: #333;
+        background-color: #2c3e50;
+        font-weight: bold;
+    }
+
+    .data-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    /* Scrollable Table Container */
+    .table-container {
+        max-height: 300px; /* Set height limit */
+        overflow-y: auto;  /* Enable vertical scrolling */
+        border: 1px solid #ddd;
+        margin-top: 10px;
+    }
+
+    /* Ensures header stays in place when scrolling */
+    .table-container thead th {
+        position: sticky;
+        top: 0;
+        background-color: #f4f4f4;
+        z-index: 1;
+    }
+		
+/* User Form Modal */
+        .Event-form-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .Event-form-modal.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .Event-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .Event-form input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .Event-form button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+			border-radius:15px;
+            padding: 10px;
+            cursor: pointer;
+        }
+/* Loyalty Form Modal */
+        .Loyalty-form-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .Loyalty-form-modal.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .Loyalty-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .Loyalty-form input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .Loyalty-form button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+			border-radius:15px;
+            padding: 10px;
+            cursor: pointer;
+        }
+/* Contact Form Modal */
+        .Contact-form-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .Contact-form-modal.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .Contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .Contact-form input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .Contact-form button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+			border-radius:15px;
+            padding: 10px;
+            cursor: pointer;
+        }
+/* Comment Form Modal */
+        .Comment-form-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .Comment-form-modal.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .Comment-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .Comment-form input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .Comment-form button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+			border-radius:15px;
+            padding: 10px;
+            cursor: pointer;
+        }
+		
+/* Modal Overlay */
+.edit-form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0; /* Initially transparent */
+    transition: visibility 0s, opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+.edit-form-modal.active {
+    visibility: visible; /* Show the modal */
+    opacity: 1; /* Fade in */
+}
+
+/* Edit Form Styling */
+.edit-form {
+    background-color: #ffffff; /* White background */
+    padding: 30px; /* Padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    width: 400px; /* Width of the form */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    gap: 20px; /* Space between elements */
+    animation: slideIn 0.3s ease; /* Slide-in animation */
+}
+
+/* Input Fields */
+.edit-form input {
+    padding: 12px; /* Increased padding for inputs */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Larger font for readability */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.edit-form input:focus {
+    border-color: #4caf50; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Form Buttons */
+.edit-form button {
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 25px; /* More rounded corners */
+    padding: 12px; /* Consistent padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+/* Button Hover Effects */
+.edit-form button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.edit-form button:active {
+    transform: translateY(1px); /* Slight drop effect on click */
+}
+
+/* Cancel Button */
+.edit-form button.cancel {
+    background-color: #f44336; /* Red background for cancel */
+}
+
+.edit-form button.cancel:hover {
+    background-color: #e53935; /* Darker red on hover */
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px); /* Slide from above */
+        opacity: 0; /* Start transparent */
+    }
+    to {
+        transform: translateY(0); /* End at normal position */
+        opacity: 1; /* End opaque */
+    }
+}
+/* Modal Overlay */
+.edit-reservation-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0; /* Initially transparent */
+    transition: visibility 0s, opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+.edit-reservation-modal.active {
+    visibility: visible; /* Show the modal */
+    opacity: 1; /* Fade in */
+}
+
+.edit-Event-modal {
+    display: none;
+}
+.edit-Event-modal.active {
+    display: block;
+}
+
+
+/* Modal Background Overlay */
+.edit-form-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Modal Box Styling */
+.edit-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    width: 350px;  /* Compact Width */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Form Header */
+.edit-form h2 {
+    text-align: center;
+    font-size: 20px;  /* Compact Header Size */
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Form Inputs */
+.edit-form input {
+    width: 100%;
+    padding: 10px;  /* Smaller Padding */
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;  /* Compact Input Font */
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+/* Input Focus Effect */
+.edit-form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+/* Buttons Styling */
+.button-group button {
+    width: 48%;
+    padding: 8px;  /* Reduced Padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;  /* Compact Font Size */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+
+/* Update Button */
+.button-group button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+.button-group button[type="submit"]:hover {
+    background-color: #218838;
+    transform: scale(1.03);
+}
+
+/* Cancel Button */
+.button-group .cancel {
+    background-color: #dc3545;
+    color: white;
+}
+
+.button-group .cancel:hover {
+    background-color: #c82333;
+    transform: scale(1.03);
+}
+
+/* Modal Transition Animation */
+.edit-form-modal.active {
+    display: block;
+    opacity: 1;
+}
+
+@keyframes slideIn {
+    from { transform: translate(-50%, -60%); }
+    to { transform: translate(-50%, -50%); }
+}
+
+
+.edit-Event-modal {
+    display: none; /* Ensure it's hidden initially */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.edit-Event-modal.active {
+    display: block; /* Show when active */
+}
+
+/* Modal Background Overlay */
+.edit-employee-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Modal Box Styling */
+.edit-employee-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    width: 350px;  /* Reduced width */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Form Header */
+.edit-employee-form h2 {
+    text-align: center;
+    font-size: 20px;  /* Smaller font size */
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Form Inputs */
+.edit-employee-form input {
+    width: 100%;
+    padding: 10px;  /* Reduced padding */
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;  /* Smaller font size */
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+/* Input Field Focus Effect */
+.edit-employee-form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+/* Buttons Styling */
+.button-group button {
+    width: 48%;
+    padding: 8px;  /* Reduced padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;  /* Smaller font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+
+/* Update Button */
+.button-group button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+.button-group button[type="submit"]:hover {
+    background-color: #218838;
+    transform: scale(1.03);
+}
+
+/* Cancel Button */
+.button-group .cancel {
+    background-color: #dc3545;
+    color: white;
+}
+
+.button-group .cancel:hover {
+    background-color: #c82333;
+    transform: scale(1.03);
+}
+
+/* Modal Transition Animation */
+.edit-employee-modal.active {
+    display: block;
+    opacity: 1;
+}
+
+@keyframes slideIn {
+    from { transform: translate(-50%, -60%); }
+    to { transform: translate(-50%, -50%); }
+}
+
+.edit-comment-modal {
+    display: none; /* Ensure it's hidden initially */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.edit-comment-modal.active {
+    display: block; /* Show when active */
+}
+
+.edit-contact-modal {
+    display: none; /* Ensure it's hidden initially */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.edit-contact-modal.active {
+    display: block; /* Show when active */
+}
